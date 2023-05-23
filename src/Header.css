@@ -78,4 +78,11 @@
     font-size: 0.95rem;
     font-weight: 700;
 }
+.header__basket {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 12px;
 
+}

@@ -1,0 +1,11 @@
+.home {
+
+}
+.home__container {
+
+}
+.home__backImg {
+    width: 100%;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+}
