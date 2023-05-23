@@ -1,27 +1,30 @@
 import React from 'react';
-import  "./Product.css"
+import "./Product.css"
 import {Star} from "@mui/icons-material";
 
-function Product() {
+function Product({title, image, price, rating}) {
+
     return (
         <div className="product">
             <div className="product__info">
-                <p>The Lean Startup</p>
+                <p>{title}</p>
                 <p className="product__price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </p>
                 <p className="product__rating">
-                    <Star/>
-                    <Star/>
+
+                    {Array(rating).fill().map((_,i) => (
+                        <Star/>
+                    )) }
 
                 </p>
 
             </div>
-            <img src="https://m.media-amazon.com/images/I/81-QB7nDh4L._AC_UF1000,1000_QL80_.jpg"
+            <img src={image}
                  alt=""
                  className="product__image"/>
-            <button >Add to Basket</button>
+            <button>Add to Basket</button>
 
         </div>
     );

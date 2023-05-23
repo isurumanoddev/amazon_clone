@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css"
-import {ShoppingBasket} from "@mui/icons-material";
+import {ArrowDownward, ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
 
 function Header() {
     return (
@@ -10,7 +10,10 @@ function Header() {
                 alt=""
                 className="header__logo"/>
             <div className="header__search">
-                <input type="text" className="header__searchInput"/>
+                <button className="header__searchAll__container">All
+                    <ArrowDropDown/>
+                </button>
+                <input type="text" className="header__searchInput" placeholder={"Search Amazon"}/>
                 <div className="header__searchIcon__container">
 
                     <img
