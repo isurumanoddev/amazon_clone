@@ -1,14 +1,17 @@
 import React from 'react';
 import "./Header.css"
-import {ArrowDownward, ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
+import {ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
+import {Link} from "react-router-dom";
 
 function Header() {
     return (
         <div className="header">
-            <img
-                src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-                alt=""
-                className="header__logo"/>
+            <Link to={"/"}>
+                <img
+                    src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                    alt=""
+                    className="header__logo"/>
+            </Link>
             <div className="header__search">
                 <button className="header__searchAll__container">All
                     <ArrowDropDown/>
@@ -18,7 +21,7 @@ function Header() {
 
                     <img
                         src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png"
-                        className="header__searchIcon"/>
+                        className="header__searchIcon" alt={""}/>
                 </div>
             </div>
             <div className="header__nav">
@@ -35,10 +38,14 @@ function Header() {
                     <span className="header__optionLineTwo">Prime</span>
                 </div>
             </div>
-            <div className="header__basket">
-                <ShoppingBasket/>
-                <span className="header__optionLineTwo header__basketCount">0</span>
-            </div>
+            <Link to="/checkout">
+                <div className="header__basket">
+
+                    <ShoppingBasket/>
+
+                    <span className="header__optionLineTwo header__basketCount">0</span>
+                </div>
+            </Link>
 
         </div>
     );
