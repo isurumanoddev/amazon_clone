@@ -2,6 +2,9 @@ export const initialState = {
     basket: []
 }
 
+export const getBasketItems = (basket) =>
+    basket.map(item => console.log(item))
+
 export const getBasketTotal = (basket) =>
     basket?.reduce((amount,item) => item.price + amount ,0)
 
