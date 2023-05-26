@@ -19,6 +19,11 @@ export const reducer = (state, action) => {
                 ...state,
                 basket: [...state.basket,action.item]
             }
+
+        case "REMOVE_ITEM":
+            return{
+
+            }
         default:
             return state;
     }

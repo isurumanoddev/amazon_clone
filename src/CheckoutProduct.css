@@ -18,7 +18,16 @@
 }
 
 .checkout__left__mid__productInfo {
-    padding: 1rem 1rem 0 0;
+    padding:0 1rem ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 170px;
+
+
+}
+.checkout__left__mid__productInfo__details {
+
 }
 
 .checkout__left__mid__productInfo span {
@@ -44,12 +53,14 @@ hr {
     padding: 2px 0;
 }
 
-.checkout__left__mid__productInfo__box {
-    margin-top: 8px;
-    display: flex;
-    gap: 1rem;
-    align-items: end;
+
+.checkout__left__mid__productInfo__buttons {
+
+
 }
+
+
+
 
 .checkout__left__mid__productInfo__box__quantity {
     padding: 6px 16px;
@@ -75,7 +86,6 @@ hr {
 }
 
 .checkout__left__mid__productInfo__box__remove:hover {
-
 
     text-decoration: underline;
 

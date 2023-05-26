@@ -33,7 +33,7 @@ function Product({title, image, price, rating,id}) {
                 </p>
                 <p className="product__rating">
 
-                    {Array(rating).fill().map((_,i) => (
+                    {Array(rating).fill().map(() => (
                         <Star/>
                     )) }
 
