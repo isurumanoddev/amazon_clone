@@ -1,23 +1,24 @@
 export const initialState = {
-    basket:[]
+    basket: []
 }
+
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount,item) => item.price + amount ,0)
+
 
 export const reducer = (state, action) => {
 
+
+
     switch (action.type) {
-        case "ADD_BASKET":
+        case 'ADD_BASKET':
             return {
                 ...state,
-                basket: [...state.basket,action.item],
-
-            }
-        case "REMOVE_BASKET":
-            return {
-                 ...state,
-                basket: [...state.basket,action.item],
+                basket: [...state.basket,action.item]
             }
         default:
             return state;
     }
 
-};
+
+}

@@ -20,9 +20,7 @@ function Checkout() {
                 </div>
 
                 <div className="checkout__left__mid">
-                    {basket.map(item => {
-                       item.title
-                    })}
+
 
                     <div className="checkout__left__mid__product">
                         <img src="https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SX522_.jpg" alt=""
