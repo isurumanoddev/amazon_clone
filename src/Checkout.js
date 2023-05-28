@@ -19,14 +19,9 @@ function Checkout() {
                 <div className="checkout__left__mid">
                     {
                         basket.map(item =>
-                        <CheckoutProduct id={item.id} title={item.title} price={item.price} image={item.image}/>
-
+                            <CheckoutProduct id={item.id} title={item.title} price={item.price} image={item.image}/>
                         )
                     }
-
-
-
-
 
 
                 </div>
