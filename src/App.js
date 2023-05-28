@@ -6,6 +6,8 @@ import Home from "./Home";
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Checkout from "./Checkout";
+import Login from "./Login";
+
 
 
 
@@ -21,7 +23,7 @@ function App() {
                 <Routes>
                    <Route path="/" element={<Home/>} />
                    <Route path="/checkout" element={<Checkout/>} />
-                   <Route path="/login" element={<L/>} />
+                   <Route path="/login" element={<Login/>} />
 
                 </Routes>
             </BrowserRouter>

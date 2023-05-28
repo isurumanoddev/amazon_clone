@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {useStateValue} from "./StateProvider";
 
 function Header() {
-    const [{basket},dispatch] = useStateValue()
+    const [{basket}, dispatch] = useStateValue()
 
     return (
         <div className="header">
@@ -28,10 +28,12 @@ function Header() {
                 </div>
             </div>
             <div className="header__nav">
-                <div className="header__option">
-                    <span className="header__optionLineOne">Hello Guest</span>
-                    <span className="header__optionLineTwo">Sign In</span>
-                </div>
+                <Link to="/login">
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Hello Guest</span>
+                        <span className="header__optionLineTwo">Sign In</span>
+                    </div>
+                </Link>
                 <div className="header__option">
                     <span className="header__optionLineOne">Returns</span>
                     <span className="header__optionLineTwo">& Orders</span>
