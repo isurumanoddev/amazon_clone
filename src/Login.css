@@ -47,7 +47,7 @@
     border-radius: 4px;
 }
 
-button {
+.login__button {
     width: 100%;
     padding: 8px;
     background-color: #f5f11e;
@@ -60,7 +60,7 @@ button {
     margin: 1rem 0;
 }
 
-button:hover {
+.login__button:hover {
     background-color: #eae71a;
 }
 
@@ -79,24 +79,27 @@ button:hover {
 
     font-weight: 500;
     cursor: pointer;
-    margin: 1rem 0;
+
     font-size: 0.75rem;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
 }
 .login__registerBtn:hover {
     background: #fafafa;
 }
-.container {
+.login__new__container {
+    margin-top: 10px;
   display: flex;
   align-items: center;
 }
 
-.vertical-line {
-  width: 2px;
-  height: 100px;
-  background-color: #000;
+.horizontal-line {
+  width: 100px;
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  margin: 20px 0;
 }
 
 .name {
-  margin: 0 20px;
+    font-size: 0.8rem;
+  margin: 0 10px;
 }
