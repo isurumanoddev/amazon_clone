@@ -32,9 +32,9 @@
 
 /* Styling for the container */
 .payments__container {
-  max-width: 1100px;
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 2fr 2fr;
   margin: 0 auto;
   gap: 2rem;
   position: relative;
@@ -129,11 +129,12 @@ ol {
 
 /* Styling for the right container */
 .payments__container__right {
-  flex: 1;
+
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 8px;
   height: max-content;
-  padding: 2rem 1.4rem ;
+  padding: 0 1.4rem ;
+
 
 }
 .payments__container__right__top {

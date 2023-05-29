@@ -3,9 +3,10 @@ import {Link} from "react-router-dom";
 import "./Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
+import CheckoutProduct from "./CheckoutProduct";
 
 function Payments() {
-        const [{basket}, dispatch] = useStateValue()
+    const [{basket}, dispatch] = useStateValue()
 
     return (
         <div className="payments">
@@ -16,10 +17,22 @@ function Payments() {
                         alt=""
                         className="header__logo"/>
                 </Link>
-                <h2 className="payments__header__title">Checkout ( {basket.length} Item)</h2>
+                <Link to={"/checkout"}>
+
+                    <h2 className="payments__header__title">Checkout ( {basket.length} Item)</h2>
+                </Link>
             </div>
             <div className="payments__container">
                 <div className="payments__container__left">
+                    <ol>
+                        {basket.map((item) =>
+
+                            <CheckoutProduct id={item.id} image={item.image} title={item.title} price={item.price}/>
+                        )}
+
+                    </ol>
+                </div>
+                <div className="payments__container__right">
                     <ol>
                         <li className="payment__details_list__1">
                             <div className="payment__details_list__title">Shipping address</div>
@@ -34,7 +47,7 @@ function Payments() {
                         <li className="payment__details_list">
                             <div className="payment__details_list__title"> Choose a payment method</div>
                             <div className="payment__details_list__payment">
-                                <h3 >Add a credit or debit card</h3>
+                                <h3>Add a credit or debit card</h3>
                                 <div className="payment__details_list__payment__input">
                                     <label htmlFor="">Card number</label>
                                     <input type="text"/>
@@ -56,63 +69,65 @@ function Payments() {
                             </div>
 
                         </li>
-                        <li className="payment__details_list">
-                            <div className="payment__details_list__title">Items and shipping</div>
-                            <div className="payment__details_list__info conditions">
-                                <p>
-                                    *Why has sales tax been applied? See tax and seller information.<br/>
-                                    Need help? Check our Help pages or contact us<br/>
-                                    For an item sold by Amazon.com: When you click the "Place your order" button, we'll
-                                    send you an email message acknowledging receipt of your order. Your contract to
-                                    purchase an item will not be complete until we send you an email notifying you that
-                                    the item has been shipped.<br/>
-                                    All items in this order are sold by Amazon Export Sales LLC (AES), unless otherwise
-                                    noted. By placing your order, you authorize AES to designate a carrier to clear the
-                                    package and pay the import fees on your (or the recipient's) behalf. Customs
-                                    declarations will be made in the name and on the behalf of your (or the recipient's)
-                                    behalf by the designated carrier. You can find the complete terms and conditions of
-                                    your order here<br/>
-                                    Important information about sales tax you may owe in your state<br/>
-                                    You may return new, unopened merchandise in original condition within 30 days of
-                                    delivery. Exceptions and restrictions apply. See Amazon.com's Returns Policy.<br/>
-                                    Need to add more items to your order? Continue shopping on the Amazon.com
-                                    homepage.</p>
+                        <div className="payments__container__right__top">
+                            <button className="payment__details_list__payment__submit button-2">Use this payment method
+                            </button>
+                            <p>Choose a payment method to continue checking out. You'll still have a chance to review
+                                and
+                                edit your order before it's final.</p>
+                        </div>
+                        <div className="payments__container__right__mid">
+                            <div className="payments__container__right__title">Use this payment method</div>
+
+                            <div className="payments__container__right__mid__info">
+                                <p>Items:</p>
+                                <p>$8.99</p>
 
                             </div>
+                            <div className="payments__container__right__mid__info">
+                                <p>Shipping & handling:</p>
+                                <p>$42.99</p>
 
-                        </li>
+                            </div>
+                            <div className="payments__container__right__mid__info">
+                                <p>Total before tax:</p>
+                                <p>$52.00</p>
+
+                            </div>
+                        </div>
+                        <div className="payments__container__right__bootom">
+                            <div className="payments__container__right__botton__title">Order total:</div>
+                            <div className="payments__container__right__botton__title">${getBasketTotal(basket)}</div>
+
+                        </div>
+                        {/*<li className="payment__details_list">*/}
+                        {/*    <div className="payment__details_list__title">Items and shipping</div>*/}
+                        {/*    <div className="payment__details_list__info conditions">*/}
+                        {/*        <p>*/}
+                        {/*            *Why has sales tax been applied? See tax and seller information.<br/>*/}
+                        {/*            Need help? Check our Help pages or contact us<br/>*/}
+                        {/*            For an item sold by Amazon.com: When you click the "Place your order" button, we'll*/}
+                        {/*            send you an email message acknowledging receipt of your order. Your contract to*/}
+                        {/*            purchase an item will not be complete until we send you an email notifying you that*/}
+                        {/*            the item has been shipped.<br/>*/}
+                        {/*            All items in this order are sold by Amazon Export Sales LLC (AES), unless otherwise*/}
+                        {/*            noted. By placing your order, you authorize AES to designate a carrier to clear the*/}
+                        {/*            package and pay the import fees on your (or the recipient's) behalf. Customs*/}
+                        {/*            declarations will be made in the name and on the behalf of your (or the recipient's)*/}
+                        {/*            behalf by the designated carrier. You can find the complete terms and conditions of*/}
+                        {/*            your order here<br/>*/}
+                        {/*            Important information about sales tax you may owe in your state<br/>*/}
+                        {/*            You may return new, unopened merchandise in original condition within 30 days of*/}
+                        {/*            delivery. Exceptions and restrictions apply. See Amazon.com's Returns Policy.<br/>*/}
+                        {/*            Need to add more items to your order? Continue shopping on the Amazon.com*/}
+                        {/*            homepage.</p>*/}
+
+                        {/*    </div>*/}
+
+                        {/*</li>*/}
                     </ol>
-                </div>
-                <div className="payments__container__right">
-                    <div className="payments__container__right__top">
-                        <button className="payment__details_list__payment__submit button-2">Use this payment method</button>
-                        <p>Choose a payment method to continue checking out. You'll still have a chance to review and
-                            edit your order before it's final.</p>
-                    </div>
-                    <div className="payments__container__right__mid">
-                        <div className="payments__container__right__title">Use this payment method</div>
 
-                        <div className="payments__container__right__mid__info">
-                            <p>Items:</p>
-                            <p>$8.99</p>
 
-                        </div>
-                        <div className="payments__container__right__mid__info">
-                            <p>Shipping & handling:</p>
-                            <p>$42.99</p>
-
-                        </div>
-                         <div className="payments__container__right__mid__info">
-                            <p>Total before tax:</p>
-                            <p>$52.00</p>
-
-                        </div>
-                    </div>
-                    <div className="payments__container__right__bootom">
-                        <div className="payments__container__right__botton__title">Order total:</div>
-                        <div className="payments__container__right__botton__title">${getBasketTotal(basket)}</div>
-
-                    </div>
                 </div>
 
             </div>
