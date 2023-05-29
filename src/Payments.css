@@ -1,0 +1,115 @@
+/* Styling for the payments container */
+.payments {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the header */
+.payments__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header__logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.payments__header__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styling for the container */
+.payments__container {
+  display: flex;
+}
+
+/* Styling for the left container */
+.payments__container__left {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.payment__details_list {
+  margin-bottom: 20px;
+}
+
+.payment__details_list__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment__details_list__info p {
+  margin: 0;
+}
+
+.payment__details_list__payment h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment__details_list__payment__input {
+  margin-bottom: 10px;
+}
+
+.payment__details_list__payment__input label {
+  display: block;
+  font-weight: bold;
+}
+
+.payment__details_list__payment__input input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.payment__details_list__payment__submit {
+  background-color: #f0c14b;
+  border: none;
+  color: #111;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styling for the right container */
+.payments__container__right {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.payments__container__right__button {
+  background-color: #f0c14b;
+  border: none;
+  color: #111;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.payments__container__right__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payments__container__right__mid__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.payments__container__right__botton__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
