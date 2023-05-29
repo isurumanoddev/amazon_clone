@@ -8,9 +8,13 @@ import {auth} from "./firebase";
 
 function Header() {
 
-    const [{basket,user}, dispatch] = useStateValue()
-    const signOut = () => {
-        auth.signOut()
+    const [{basket, user}, dispatch] = useStateValue()
+
+    const getUsername = user?.email.split("@")[0]
+
+    console.log("getUsername : ",getUsername)
+    const handleAuthentication = async () => {
+        await auth.signOut()
     }
 
     return (
@@ -34,10 +38,10 @@ function Header() {
                 </div>
             </div>
             <div className="header__nav">
-                <Link to={user === null &&"/login"}>
-                    <div onClick={signOut} className="header__option">
-                        <span className="header__optionLineOne">Hello {user ? user?.email : "Guest"} </span>
-                        <span className="header__optionLineTwo">{user? "Sign Out" : "Sign In"}</span>
+                <Link to={user === null && "/login"}>
+                    <div onClick={handleAuthentication} className="header__option">
+                        <span className="header__optionLineOne">Hello {user ? getUsername : "Guest"} </span>
+                        <span className="header__optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
                     </div>
                 </Link>
                 <div className="header__option">
