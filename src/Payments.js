@@ -1,8 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import "./Payments.css"
+import {getBasketTotal} from "./reducer";
+import {useStateValue} from "./StateProvider";
 
 function Payments() {
+        const [{basket}, dispatch] = useStateValue()
+
     return (
         <div className="payments">
             <div className="payments__header">
@@ -12,7 +16,7 @@ function Payments() {
                         alt=""
                         className="header__logo"/>
                 </Link>
-                <h2 className="payments__header__title">Checkout ( 1 Item)</h2>
+                <h2 className="payments__header__title">Checkout ( {basket.length} Item)</h2>
             </div>
             <div className="payments__container">
                 <div className="payments__container__left">
@@ -54,7 +58,7 @@ function Payments() {
                         </li>
                         <li className="payment__details_list">
                             <div className="payment__details_list__title">Items and shipping</div>
-                            <div className="payment__details_list__info">
+                            <div className="payment__details_list__info conditions">
                                 <p>
                                     *Why has sales tax been applied? See tax and seller information.<br/>
                                     Need help? Check our Help pages or contact us<br/>
@@ -81,7 +85,7 @@ function Payments() {
                 </div>
                 <div className="payments__container__right">
                     <div className="payments__container__right__top">
-                        <button className="payment__details_list__payment__submit">Use this payment method</button>
+                        <button className="payment__details_list__payment__submit button-2">Use this payment method</button>
                         <p>Choose a payment method to continue checking out. You'll still have a chance to review and
                             edit your order before it's final.</p>
                     </div>
@@ -104,9 +108,9 @@ function Payments() {
 
                         </div>
                     </div>
-                    <div className="payments__container__right__mid">
+                    <div className="payments__container__right__bootom">
                         <div className="payments__container__right__botton__title">Order total:</div>
-                        <div className="payments__container__right__botton__title">$51.40</div>
+                        <div className="payments__container__right__botton__title">${getBasketTotal(basket)}</div>
 
                     </div>
                 </div>
