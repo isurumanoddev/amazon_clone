@@ -6,9 +6,11 @@ import {auth} from "./firebase";
 
 
 function Login() {
+
     const navigate = useNavigate()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+
 
     const signIn = async (e) => {
         e.preventDefault()
