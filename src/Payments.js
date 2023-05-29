@@ -1,15 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import "./Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
+
 function Payments() {
     const [{basket}, dispatch] = useStateValue()
 
     const stripe = useStripe();
     const elements = useElements();
+
+    const [error, setError] = useState(null)
+    const [disabled, setDisabled] = useState(true)
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+    }
+    const handleChange = (event) => {
+        event.preventDefault()
+        setDisabled(event.empty)
+        setError(event.error ? event.error.message:"")
+
+    }
 
     return (
         <div className="payments">
@@ -50,33 +64,10 @@ function Payments() {
                         <li className="payment__details_list">
                             <div className="payment__details_list__title"> Choose a payment method</div>
                             <div className="payment__details_list__payment">
-                                <form action="">
-                                    <CardElement />
-                                    <button type="submit" disabled={!stripe || !elements}>
-        Pay
-      </button>
+                                <form action="" onSubmit={handleSubmit}>
+                                    <CardElement onChange={handleChange}/>
+
                                 </form>
-
-
-                                {/*<h3>Add a credit or debit card</h3>*/}
-                                {/*<div className="payment__details_list__payment__input">*/}
-                                {/*    <label htmlFor="">Card number</label>*/}
-                                {/*    <input type="text"/>*/}
-
-                                {/*</div>*/}
-                                {/*<div className="payment__details_list__payment__input">*/}
-                                {/*    <label htmlFor="">Name on card</label>*/}
-                                {/*    <input type="text"/>*/}
-
-                                {/*</div>*/}
-                                {/*<div className="payment__details_list__payment__input">*/}
-                                {/*    <label htmlFor="">Expiration date</label>*/}
-                                {/*    <input type="date"/>*/}
-
-                                {/*</div>*/}
-                                {/*<button className="payment__details_list__payment__submit">Add your card</button>*/}
-
-
                             </div>
 
                         </li>
@@ -87,55 +78,13 @@ function Payments() {
                                 and
                                 edit your order before it's final.</p>
                         </div>
-                        <div className="payments__container__right__mid">
-                            <div className="payments__container__right__title">Use this payment method</div>
-
-                            <div className="payments__container__right__mid__info">
-                                <p>Items:</p>
-                                <p>$8.99</p>
-
-                            </div>
-                            <div className="payments__container__right__mid__info">
-                                <p>Shipping & handling:</p>
-                                <p>$42.99</p>
-
-                            </div>
-                            <div className="payments__container__right__mid__info">
-                                <p>Total before tax:</p>
-                                <p>$52.00</p>
-
-                            </div>
-                        </div>
                         <div className="payments__container__right__bootom">
                             <div className="payments__container__right__botton__title">Order total:</div>
                             <div className="payments__container__right__botton__title">${getBasketTotal(basket)}</div>
 
                         </div>
-                        {/*<li className="payment__details_list">*/}
-                        {/*    <div className="payment__details_list__title">Items and shipping</div>*/}
-                        {/*    <div className="payment__details_list__info conditions">*/}
-                        {/*        <p>*/}
-                        {/*            *Why has sales tax been applied? See tax and seller information.<br/>*/}
-                        {/*            Need help? Check our Help pages or contact us<br/>*/}
-                        {/*            For an item sold by Amazon.com: When you click the "Place your order" button, we'll*/}
-                        {/*            send you an email message acknowledging receipt of your order. Your contract to*/}
-                        {/*            purchase an item will not be complete until we send you an email notifying you that*/}
-                        {/*            the item has been shipped.<br/>*/}
-                        {/*            All items in this order are sold by Amazon Export Sales LLC (AES), unless otherwise*/}
-                        {/*            noted. By placing your order, you authorize AES to designate a carrier to clear the*/}
-                        {/*            package and pay the import fees on your (or the recipient's) behalf. Customs*/}
-                        {/*            declarations will be made in the name and on the behalf of your (or the recipient's)*/}
-                        {/*            behalf by the designated carrier. You can find the complete terms and conditions of*/}
-                        {/*            your order here<br/>*/}
-                        {/*            Important information about sales tax you may owe in your state<br/>*/}
-                        {/*            You may return new, unopened merchandise in original condition within 30 days of*/}
-                        {/*            delivery. Exceptions and restrictions apply. See Amazon.com's Returns Policy.<br/>*/}
-                        {/*            Need to add more items to your order? Continue shopping on the Amazon.com*/}
-                        {/*            homepage.</p>*/}
 
-                        {/*    </div>*/}
 
-                        {/*</li>*/}
                     </ol>
 
 
