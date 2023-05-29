@@ -4,9 +4,12 @@ import "./Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
-
+import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
 function Payments() {
     const [{basket}, dispatch] = useStateValue()
+
+    const stripe = useStripe();
+    const elements = useElements();
 
     return (
         <div className="payments">
@@ -47,23 +50,31 @@ function Payments() {
                         <li className="payment__details_list">
                             <div className="payment__details_list__title"> Choose a payment method</div>
                             <div className="payment__details_list__payment">
-                                <h3>Add a credit or debit card</h3>
-                                <div className="payment__details_list__payment__input">
-                                    <label htmlFor="">Card number</label>
-                                    <input type="text"/>
+                                <form action="">
+                                    <CardElement />
+                                    <button type="submit" disabled={!stripe || !elements}>
+        Pay
+      </button>
+                                </form>
 
-                                </div>
-                                <div className="payment__details_list__payment__input">
-                                    <label htmlFor="">Name on card</label>
-                                    <input type="text"/>
 
-                                </div>
-                                <div className="payment__details_list__payment__input">
-                                    <label htmlFor="">Expiration date</label>
-                                    <input type="date"/>
+                                {/*<h3>Add a credit or debit card</h3>*/}
+                                {/*<div className="payment__details_list__payment__input">*/}
+                                {/*    <label htmlFor="">Card number</label>*/}
+                                {/*    <input type="text"/>*/}
 
-                                </div>
-                                <button className="payment__details_list__payment__submit">Add your card</button>
+                                {/*</div>*/}
+                                {/*<div className="payment__details_list__payment__input">*/}
+                                {/*    <label htmlFor="">Name on card</label>*/}
+                                {/*    <input type="text"/>*/}
+
+                                {/*</div>*/}
+                                {/*<div className="payment__details_list__payment__input">*/}
+                                {/*    <label htmlFor="">Expiration date</label>*/}
+                                {/*    <input type="date"/>*/}
+
+                                {/*</div>*/}
+                                {/*<button className="payment__details_list__payment__submit">Add your card</button>*/}
 
 
                             </div>

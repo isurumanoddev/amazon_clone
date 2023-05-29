@@ -10,12 +10,16 @@ import Login from "./Login";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
 import Payments from "./Payments";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
 
 
-
+const promise = loadStripe(
+    "pk_test_51NDDeGCTBPVFaxN9EEYNJCVb2lVydpDVVCGTqh2Tx1bidionz9YbRQA6VHphEbD8EbDt7JUv3ySeqk1Y3ewX6zqF00JgsyGc7X"
+)
 
 function App() {
-    const [{basket,user},dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
 
     useEffect(() => {
         auth.onAuthStateChanged(authUser => {
@@ -24,18 +28,16 @@ function App() {
             if (authUser) {
                 dispatch({
                     type: "SET_USER",
-                    user:authUser,
+                    user: authUser,
                 })
             } else {
                 dispatch({
                     type: "SET_USER",
-                    user:null,
+                    user: null,
                 })
             }
         })
     }, []);
-
-
 
 
     return (
@@ -50,7 +52,13 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/checkout" element={<Checkout/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path="/payment" element={<Payments/>}/>
+
+                    <Route path="/payment" element={
+                        <Elements stripe={promise}>
+                            <Payments/>
+                        </Elements>
+
+                    }/>
 
                 </Routes>
             </BrowserRouter>
