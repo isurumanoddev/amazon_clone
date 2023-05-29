@@ -27,7 +27,7 @@ function CheckoutProduct({id, title, price, image}) {
                         <div className="checkout__left__mid__productInfo__style"><span>$ {price} </span></div>
                     </div>
                     <div className="checkout__left__mid__productInfo__buttons">
-                        <button className="checkout__left__mid__productInfo__box__quantity">Qty : {}</button>
+
                         <button onClick={removeFromBasket}
                                 className="checkout__left__mid__productInfo__box__remove">Delete
                         </button>
