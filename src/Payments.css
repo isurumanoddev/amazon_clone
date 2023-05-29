@@ -1,8 +1,8 @@
 /* Styling for the payments container */
 .payments {
   margin: 0 auto;
-  max-width: 800px;
-  padding: 20px;
+
+
   background-color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -11,22 +11,31 @@
 .payments__header {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
+  width: 100%;
+    background:rgb(234,237,237) ;
 }
 
 .header__logo {
   height: 50px;
   margin-right: 10px;
+  justify-self: start;
 }
 
 .payments__header__title {
   font-size: 24px;
   font-weight: bold;
+  justify-self: center;
 }
 
 /* Styling for the container */
 .payments__container {
-  display: flex;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 0 auto;
+  gap: 2rem;
 }
 
 /* Styling for the left container */
@@ -34,34 +43,63 @@
   flex: 1;
   margin-right: 20px;
 }
-
+.payment__details_list__1 {
+  margin-bottom: 10px;
+  height: max-content;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+ }
 .payment__details_list {
-  margin-bottom: 20px;
+
+  margin-bottom: 10px;
+  padding:0.5rem  1rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+
 }
 
 .payment__details_list__title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 10px;
+}
+.payment__details_list__info {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+
+
+}
+.payment__details_list__payment {
+   border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .payment__details_list__info p {
-  margin: 0;
+  margin: 0.1rem 0;
+  font-size: 0.8rem;
+  color: #333;
 }
 
 .payment__details_list__payment h3 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
 .payment__details_list__payment__input {
   margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+
 }
 
 .payment__details_list__payment__input label {
   display: block;
-  font-weight: bold;
+  font-weight: 450;
+  margin-left: 0.2rem;
 }
 
 .payment__details_list__payment__input input {
@@ -73,6 +111,7 @@
 .payment__details_list__payment__submit {
   background-color: #f0c14b;
   border: none;
+  border-radius:8px ;
   color: #111;
   padding: 10px 20px;
   font-size: 16px;
@@ -82,8 +121,10 @@
 /* Styling for the right container */
 .payments__container__right {
   flex: 1;
-  background-color: #f5f5f5;
-  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  height: max-content;
+  padding: 2rem 1.4rem ;
 }
 
 .payments__container__right__button {
@@ -94,6 +135,7 @@
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .payments__container__right__title {

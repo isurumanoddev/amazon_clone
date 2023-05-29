@@ -1,3 +1,6 @@
+* {
+    font-family:  Roboto,sans-serif;;
+}
 .home {
 display: flex;
     justify-content: center;

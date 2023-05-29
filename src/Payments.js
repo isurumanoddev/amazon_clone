@@ -8,7 +8,7 @@ function Payments() {
             <div className="payments__header">
                 <Link to={"/"}>
                     <img
-                        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/603px-Amazon_logo.svg.png"
                         alt=""
                         className="header__logo"/>
                 </Link>
@@ -17,7 +17,7 @@ function Payments() {
             <div className="payments__container">
                 <div className="payments__container__left">
                     <ol>
-                        <li className="payment__details_list">
+                        <li className="payment__details_list__1">
                             <div className="payment__details_list__title">Shipping address</div>
                             <div className="payment__details_list__info">
                                 <p>Isuru Manod Senanayake</p>
@@ -30,7 +30,7 @@ function Payments() {
                         <li className="payment__details_list">
                             <div className="payment__details_list__title"> Choose a payment method</div>
                             <div className="payment__details_list__payment">
-                                <h3 className="payment__details_list__payment">Add a credit or debit card</h3>
+                                <h3 >Add a credit or debit card</h3>
                                 <div className="payment__details_list__payment__input">
                                     <label htmlFor="">Card number</label>
                                     <input type="text"/>
@@ -81,24 +81,26 @@ function Payments() {
                 </div>
                 <div className="payments__container__right">
                     <div className="payments__container__right__top">
-                        <button className="payments__container__right__button">Use this payment method</button>
-                        <p></p>
+                        <button className="payment__details_list__payment__submit">Use this payment method</button>
+                        <p>Choose a payment method to continue checking out. You'll still have a chance to review and
+                            edit your order before it's final.</p>
                     </div>
                     <div className="payments__container__right__mid">
                         <div className="payments__container__right__title">Use this payment method</div>
+
                         <div className="payments__container__right__mid__info">
                             <p>Items:</p>
                             <p>$8.99</p>
 
                         </div>
                         <div className="payments__container__right__mid__info">
-                            <p>Items:</p>
-                            <p>$8.99</p>
+                            <p>Shipping & handling:</p>
+                            <p>$42.99</p>
 
                         </div>
-                        <div className="payments__container__right__mid__info">
-                            <p>Items:</p>
-                            <p>$8.99</p>
+                         <div className="payments__container__right__mid__info">
+                            <p>Total before tax:</p>
+                            <p>$52.00</p>
 
                         </div>
                     </div>
