@@ -27,7 +27,7 @@ function Checkout() {
                             <CheckoutProduct id={item.id} image={item.image} title={item.title} price={item.price}/>
                         )}
 
-
+/
 
 
                 </div>

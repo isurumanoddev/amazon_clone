@@ -45,7 +45,7 @@ function Login() {
         <div className="login">
             <Link to="/">
                 <img
-                    src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/603px-Amazon_logo.svg.png"
                     alt=""
                     className="login__logo"/>
             </Link>
