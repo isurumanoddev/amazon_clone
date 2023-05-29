@@ -3,24 +3,11 @@ import "./Header.css"
 import {ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 import {useStateValue} from "./StateProvider";
-import {auth} from "./firebase";
+
 
 function Header() {
 
-
-    const [{basket, user}, dispatch] = useStateValue()
-
-
-    const getEmail = (email) => email.split("@")[0]
-    const username = user?.email
-
-
-
-    const handleAuthentication = () => {
-        if (user) {
-            auth.signOut()
-        }
-    }
+    const [{basket}, dispatch] = useStateValue()
 
     return (
         <div className="header">
@@ -43,10 +30,10 @@ function Header() {
                 </div>
             </div>
             <div className="header__nav">
-                <Link to={!user && "/login"}>
-                    <div onClick={handleAuthentication} className="header__option">
-                        <span className="header__optionLineOne">Hello {user ? username : "Guest"}</span>
-                        <span className="header__optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
+                <Link to={"/login"}>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Hello </span>
+                        <span className="header__optionLineTwo"></span>
                     </div>
                 </Link>
                 <div className="header__option">
@@ -63,7 +50,7 @@ function Header() {
 
                     <ShoppingBasket/>
 
-                    <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+                    <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
                 </div>
             </Link>
 
