@@ -1,4 +1,7 @@
 /* Styling for the payments container */
+body {
+  background: white;
+}
 .payments {
   margin: 0 auto;
 
@@ -55,7 +58,7 @@
 
   margin-bottom: 10px;
   padding:0.5rem  1rem 1rem;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+  /*border-bottom: 1px solid rgba(0,0,0,0.2);*/
 
 }
 
@@ -134,6 +137,11 @@ ol {
   border-radius: 8px;
   height: max-content;
   padding: 0 1.4rem ;
+   position: sticky;
+  top: 20px;
+
+
+
 
 
 }
@@ -150,7 +158,8 @@ ol {
   margin: 0.8rem 0.6rem;
 }
 .button-2 {
-  align-self: center;
+  align-self: flex-end;
+  margin-right: 1rem;
 }
 .payments__container__right__mid {
   border-bottom: 1px solid rgba(0,0,0,0.2);

@@ -5,6 +5,7 @@ import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
+import CurrencyFormat from "react-currency-format";
 
 function Payments() {
     const [{basket}, dispatch] = useStateValue()
@@ -21,7 +22,7 @@ function Payments() {
     const handleChange = (event) => {
         event.preventDefault()
         setDisabled(event.empty)
-        setError(event.error ? event.error.message:"")
+        setError(event.error ? event.error.message : "")
 
     }
 
@@ -62,7 +63,7 @@ function Payments() {
 
                         </li>
                         <li className="payment__details_list">
-                            <div className="payment__details_list__title"> Choose a payment method</div>
+                            <div className="payment__details_list__title"> Add Debit or Credit Card Details</div>
                             <div className="payment__details_list__payment">
                                 <form action="" onSubmit={handleSubmit}>
                                     <CardElement onChange={handleChange}/>
@@ -72,17 +73,28 @@ function Payments() {
 
                         </li>
                         <div className="payments__container__right__top">
-                            <button className="payment__details_list__payment__submit button-2">Use this payment method
+                            <button className="payment__details_list__payment__submit button-2">Make Payment
                             </button>
                             <p>Choose a payment method to continue checking out. You'll still have a chance to review
                                 and
                                 edit your order before it's final.</p>
                         </div>
-                        <div className="payments__container__right__bootom">
-                            <div className="payments__container__right__botton__title">Order total:</div>
-                            <div className="payments__container__right__botton__title">${getBasketTotal(basket)}</div>
+                        <CurrencyFormat
+                            renderText={(value) => (
+                                <div className="payments__container__right__bootom">
+                                    <div className="payments__container__right__botton__title">Order total:</div>
+                                    <div
+                                        className="payments__container__right__botton__title">{value}</div>
 
-                        </div>
+                                </div>
+
+                            )}
+                            value={getBasketTotal(basket)}
+                            decimalScale={2}
+                            displayType={'text'}
+                            thousandSeparator={true}
+                            prefix={'$'}
+                        />
 
 
                     </ol>
