@@ -267,3 +267,1066 @@ Require stack:
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
+[debug] [2023-05-30T07:24:13.931Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:24:14.945Z] Validating nodejs source
+[debug] [2023-05-30T07:24:16.721Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:24:16.721Z] Building nodejs source
+[debug] [2023-05-30T07:24:16.722Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:24:16.724Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:24:16.733Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:24:17.125Z] Serving at port 8291
+
+[debug] [2023-05-30T07:24:17.460Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:24:17.465Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/clone-202305/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/clone-202305/us-central1/api)."}}
+[debug] [2023-05-30T07:24:21.446Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:24:21.444Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:24:21.447Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:24:21.444Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:24:21.448Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:24:21.456Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:24:21.457Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:24:21.482Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-05-30T07:24:21.483Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-05-30T07:24:23.061Z] [runtime-status] [12840] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.063Z] [runtime-status] [12840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.066Z] [runtime-status] [12840] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-30T07:24:23.067Z] [runtime-status] [12840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.369Z] [runtime-status] [12840] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-30T07:24:23.370Z] [runtime-status] [12840] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:24:23.371Z] [runtime-status] [12840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.374Z] [runtime-status] [12840] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.378Z] [runtime-status] [12840] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:24:23.379Z] [runtime-status] [12840] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:24:23.536Z] [runtime-status] [12840] Functions runtime initialized. {"cwd":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-30T07:24:23.536Z] [runtime-status] [12840] Listening to port: \\?\pipe\fire_emu_9e35c9bcff446ee1 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12840] Listening to port: \\\\?\\pipe\\fire_emu_9e35c9bcff446ee1"}}
+[debug] [2023-05-30T07:24:23.572Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE"}}
+[debug] [2023-05-30T07:24:23.572Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:24:23.573Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY"}}
+[debug] [2023-05-30T07:24:23.585Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 11.9574ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 11.9574ms"}}
+[debug] [2023-05-30T07:24:23.586Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE"}}
+[debug] [2023-05-30T07:24:23.587Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:24:23.587Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:24:23.587Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:24:23.746Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:24:33.380Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:24:33.380Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:24:33.381Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:24:33.380Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:24:33.381Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:24:33.388Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:24:33.388Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:24:33.388Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:24:33.394Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY"}}
+[debug] [2023-05-30T07:24:33.400Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.3704ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.3704ms"}}
+[debug] [2023-05-30T07:24:33.414Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE"}}
+[debug] [2023-05-30T07:24:33.414Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:24:33.414Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:24:33.415Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:24:34.041Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:27:49.556Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:27:49.555Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:27:49.559Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:27:49.555Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:27:49.565Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:27:49.571Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:27:49.572Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:27:49.572Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:27:49.619Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY"}}
+[debug] [2023-05-30T07:27:49.632Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 13.0977ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 13.0977ms"}}
+[debug] [2023-05-30T07:27:49.651Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE"}}
+[debug] [2023-05-30T07:27:49.651Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:27:49.651Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:27:49.652Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:27:50.295Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:29:48.142Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:29:49.149Z] Validating nodejs source
+[debug] [2023-05-30T07:29:55.501Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:29:55.502Z] Building nodejs source
+[debug] [2023-05-30T07:29:55.502Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:29:55.503Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:29:55.510Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:29:57.684Z] Serving at port 8719
+
+[debug] [2023-05-30T07:29:59.154Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:29:59.154Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:29:59.155Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:29:59.154Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:29:59.155Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:29:59.164Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:29:59.164Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:29:59.165Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:29:59.180Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: BUSY"}}
+[debug] [2023-05-30T07:29:59.189Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 9.1253ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 9.1253ms"}}
+[debug] [2023-05-30T07:29:59.210Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: IDLE"}}
+[debug] [2023-05-30T07:29:59.210Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:29:59.211Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:29:59.211Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:29:59.528Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:30:01.488Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:30:01.494Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:30:01.509Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-05-30T07:30:01.509Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: FINISHING"}}
+[debug] [2023-05-30T07:30:01.518Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: exited"}}
+[debug] [2023-05-30T07:30:01.518Z] [worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-c4fe530c-dbfc-414e-a3bb-38e4d07a3951]: FINISHED"}}
+[debug] [2023-05-30T07:30:06.131Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api/payments-2023-05-30T07:30:06.131Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:30:06.132Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api/payments-2023-05-30T07:30:06.131Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:30:06.133Z] Accepted request GET /clone-202305/us-central1/api/payments --> us-central1-api
+[debug] [2023-05-30T07:30:06.144Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:30:06.144Z] [functions] Got req.url=/clone-202305/us-central1/api/payments, mapping to path=/payments {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api/payments, mapping to path=/payments"}}
+[debug] [2023-05-30T07:30:06.145Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2023-05-30T07:30:06.162Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-05-30T07:30:06.162Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-05-30T07:30:12.404Z] [runtime-status] [14400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.407Z] [runtime-status] [14400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.408Z] [runtime-status] [14400] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-30T07:30:12.409Z] [runtime-status] [14400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.831Z] [runtime-status] [14400] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-30T07:30:12.832Z] [runtime-status] [14400] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:30:12.836Z] [runtime-status] [14400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.840Z] [runtime-status] [14400] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.870Z] [runtime-status] [14400] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:30:12.871Z] [runtime-status] [14400] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:30:13.118Z] [runtime-status] [14400] Functions runtime initialized. {"cwd":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-30T07:30:13.119Z] [runtime-status] [14400] Listening to port: \\?\pipe\fire_emu_28e58cd18d447ae8 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [14400] Listening to port: \\\\?\\pipe\\fire_emu_28e58cd18d447ae8"}}
+[debug] [2023-05-30T07:30:13.236Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE"}}
+[debug] [2023-05-30T07:30:13.237Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:30:13.237Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: BUSY"}}
+[debug] [2023-05-30T07:30:13.251Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 14.002ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 14.002ms"}}
+[debug] [2023-05-30T07:30:13.252Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE"}}
+[debug] [2023-05-30T07:30:13.252Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:30:13.252Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:30:13.252Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:36:07.714Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:36:07.714Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:36:07.714Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:36:07.714Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:36:07.714Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:36:07.721Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:36:07.721Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:36:07.721Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:36:07.722Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: BUSY"}}
+[debug] [2023-05-30T07:36:07.736Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 14.3511ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 14.3511ms"}}
+[debug] [2023-05-30T07:36:07.742Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: IDLE"}}
+[debug] [2023-05-30T07:36:07.743Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:36:07.743Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:36:07.743Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:36:08.019Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:36:57.152Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:36:58.162Z] Validating nodejs source
+[debug] [2023-05-30T07:37:00.068Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:37:00.069Z] Building nodejs source
+[debug] [2023-05-30T07:37:00.069Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:37:00.070Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:37:00.077Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:37:00.417Z] Serving at port 8360
+
+[debug] [2023-05-30T07:37:00.745Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:37:00.750Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:37:00.763Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-05-30T07:37:00.763Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: FINISHING"}}
+[debug] [2023-05-30T07:37:00.772Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: exited"}}
+[debug] [2023-05-30T07:37:00.772Z] [worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f7b86fe4-9dbe-4e4d-bd80-811f8f627756]: FINISHED"}}
+[debug] [2023-05-30T07:37:10.015Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:37:10.015Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:37:10.016Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:37:10.015Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:37:10.016Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:37:10.022Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:37:10.022Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:37:10.022Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[debug] [2023-05-30T07:37:10.096Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-05-30T07:37:10.097Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-05-30T07:37:11.967Z] [runtime-status] [12076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:11.969Z] [runtime-status] [12076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:11.970Z] [runtime-status] [12076] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-05-30T07:37:11.971Z] [runtime-status] [12076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:12.271Z] [runtime-status] [12076] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-05-30T07:37:12.271Z] [runtime-status] [12076] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:37:12.272Z] [runtime-status] [12076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:12.274Z] [runtime-status] [12076] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:12.281Z] [runtime-status] [12076] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-05-30T07:37:12.281Z] [runtime-status] [12076] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.8.0","resolution":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.8.0\",\"resolution\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-05-30T07:37:12.414Z] [runtime-status] [12076] Functions runtime initialized. {"cwd":"C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\isuru\\\\WebstormProjects\\\\amazon_clone\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-05-30T07:37:12.414Z] [runtime-status] [12076] Listening to port: \\?\pipe\fire_emu_4b8fcca6e2e3de00 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12076] Listening to port: \\\\?\\pipe\\fire_emu_4b8fcca6e2e3de00"}}
+[debug] [2023-05-30T07:37:12.504Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE"}}
+[debug] [2023-05-30T07:37:12.504Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:37:12.505Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY"}}
+[debug] [2023-05-30T07:37:12.514Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 9.9679ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 9.9679ms"}}
+[debug] [2023-05-30T07:37:12.516Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE"}}
+[debug] [2023-05-30T07:37:12.516Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:37:12.516Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:37:12.516Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:37:12.652Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:37:17.443Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api-2023-05-30T07:37:17.443Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:37:17.443Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api-2023-05-30T07:37:17.443Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:37:17.443Z] Accepted request GET /clone-202305/us-central1/api --> us-central1-api
+[debug] [2023-05-30T07:37:17.449Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:37:17.450Z] [functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api, mapping to path=/"}}
+[debug] [2023-05-30T07:37:17.450Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:37:17.454Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY"}}
+[debug] [2023-05-30T07:37:17.458Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4.6736ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4.6736ms"}}
+[debug] [2023-05-30T07:37:17.461Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE"}}
+[debug] [2023-05-30T07:37:17.461Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:37:17.461Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:37:17.461Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:37:17.743Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2023-05-30T07:37:25.284Z] [work-queue] {"queuedWork":["/clone-202305/us-central1/api/payments-2023-05-30T07:37:25.284Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:37:25.284Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-202305/us-central1/api/payments-2023-05-30T07:37:25.284Z"],"workRunningCount":1}
+[debug] [2023-05-30T07:37:25.285Z] Accepted request GET /clone-202305/us-central1/api/payments --> us-central1-api
+[debug] [2023-05-30T07:37:25.294Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-05-30T07:37:25.295Z] [functions] Got req.url=/clone-202305/us-central1/api/payments, mapping to path=/payments {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-202305/us-central1/api/payments, mapping to path=/payments"}}
+[debug] [2023-05-30T07:37:25.295Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-05-30T07:37:25.295Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: BUSY"}}
+[debug] [2023-05-30T07:37:25.299Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 3.7357ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 3.7357ms"}}
+[debug] [2023-05-30T07:37:25.299Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: IDLE"}}
+[debug] [2023-05-30T07:37:25.299Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-05-30T07:37:25.300Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-05-30T07:37:25.300Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-05-30T07:38:12.380Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:38:13.398Z] Validating nodejs source
+[debug] [2023-05-30T07:38:15.738Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:38:15.739Z] Building nodejs source
+[debug] [2023-05-30T07:38:15.739Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:38:15.739Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:38:15.744Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:38:16.208Z] Serving at port 8138
+
+[debug] [2023-05-30T07:38:16.660Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:38:16.664Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:38:16.678Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2023-05-30T07:38:16.678Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: FINISHING"}}
+[debug] [2023-05-30T07:38:16.695Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: exited"}}
+[debug] [2023-05-30T07:38:16.695Z] [worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-06fa5a5e-6785-4da7-9253-342c3c74b2b4]: FINISHED"}}
+[debug] [2023-05-30T07:38:34.658Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:38:35.659Z] Validating nodejs source
+[debug] [2023-05-30T07:38:39.440Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:38:39.440Z] Building nodejs source
+[debug] [2023-05-30T07:38:39.440Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:38:39.442Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:38:39.462Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:38:40.243Z] Serving at port 8940
+
+[debug] [2023-05-30T07:38:40.691Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:38:40.696Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:39:51.483Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:39:52.496Z] Validating nodejs source
+[debug] [2023-05-30T07:39:55.049Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:39:55.049Z] Building nodejs source
+[debug] [2023-05-30T07:39:55.049Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:39:55.050Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:39:55.061Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:39:55.575Z] Serving at port 8150
+
+[debug] [2023-05-30T07:39:56.115Z] Got response from /__/functions.yaml Failed to generate manifest from function source: ReferenceError: async is not defined
+[debug] [2023-05-30T07:39:56.115Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:
+     ...  function source: ReferenceError: async is not defined
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: ReferenceError: async is not defined\n\u0000","position":64,"line":0,"column":64},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:\n     ...  function source: ReferenceError: async is not defined\n                                         ^"}
+[debug] [2023-05-30T07:39:56.120Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: async is not defined {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: async is not defined"}}
+[debug] [2023-05-30T07:40:06.774Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:40:07.791Z] Validating nodejs source
+[debug] [2023-05-30T07:40:10.040Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:40:10.040Z] Building nodejs source
+[debug] [2023-05-30T07:40:10.040Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:40:10.041Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:40:10.054Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:40:10.521Z] Serving at port 8295
+
+[debug] [2023-05-30T07:40:10.971Z] Got response from /__/functions.yaml Failed to generate manifest from function source: ReferenceError: async is not defined
+[debug] [2023-05-30T07:40:10.972Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:
+     ...  function source: ReferenceError: async is not defined
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: ReferenceError: async is not defined\n\u0000","position":64,"line":0,"column":64},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 65:\n     ...  function source: ReferenceError: async is not defined\n                                         ^"}
+[debug] [2023-05-30T07:40:10.984Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: async is not defined {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: ReferenceError: async is not defined"}}
+[debug] [2023-05-30T07:42:50.063Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:42:51.076Z] Validating nodejs source
+[debug] [2023-05-30T07:42:53.164Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:42:53.165Z] Building nodejs source
+[debug] [2023-05-30T07:42:53.165Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:42:53.165Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:42:53.173Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:42:53.753Z] Serving at port 8615
+
+[debug] [2023-05-30T07:42:54.206Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:42:54.220Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:43:55.167Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:43:56.183Z] Validating nodejs source
+[debug] [2023-05-30T07:43:59.128Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:43:59.129Z] Building nodejs source
+[debug] [2023-05-30T07:43:59.129Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:43:59.130Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:43:59.135Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:44:01.397Z] Serving at port 8857
+
+[debug] [2023-05-30T07:44:01.443Z] Got response from /__/functions.yaml Failed to generate manifest from function source: SyntaxError: Unexpected token '}'
+[debug] [2023-05-30T07:44:01.444Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:
+     ... rom function source: SyntaxError: Unexpected token '}'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: SyntaxError: Unexpected token '}'\n\u0000","position":61,"line":0,"column":61},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:\n     ... rom function source: SyntaxError: Unexpected token '}'\n                                         ^"}
+[debug] [2023-05-30T07:44:01.461Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected token '}' {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected token '}'"}}
+[debug] [2023-05-30T07:44:23.658Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:44:24.660Z] Validating nodejs source
+[debug] [2023-05-30T07:44:26.646Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:44:26.646Z] Building nodejs source
+[debug] [2023-05-30T07:44:26.646Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:44:26.648Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:44:26.654Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:44:26.998Z] Serving at port 8482
+
+[debug] [2023-05-30T07:44:27.320Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:44:27.324Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:44:46.045Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:44:47.048Z] Validating nodejs source
+[debug] [2023-05-30T07:44:48.901Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:44:48.901Z] Building nodejs source
+[debug] [2023-05-30T07:44:48.901Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:44:48.902Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:44:48.906Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:44:49.204Z] Serving at port 8893
+
+[debug] [2023-05-30T07:44:49.516Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:44:49.521Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:46:36.552Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:46:37.569Z] Validating nodejs source
+[debug] [2023-05-30T07:46:39.758Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:46:39.758Z] Building nodejs source
+[debug] [2023-05-30T07:46:39.758Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:46:39.759Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:46:39.768Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:46:40.159Z] Serving at port 8286
+
+[debug] [2023-05-30T07:46:40.526Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:46:40.531Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:48:47.551Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:48:48.557Z] Validating nodejs source
+[debug] [2023-05-30T07:48:50.672Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:48:50.672Z] Building nodejs source
+[debug] [2023-05-30T07:48:50.672Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:48:50.674Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:48:50.685Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:48:51.529Z] Serving at port 8483
+
+[debug] [2023-05-30T07:48:52.104Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:48:52.115Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:49:41.059Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:49:42.062Z] Validating nodejs source
+[debug] [2023-05-30T07:49:44.326Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:49:44.327Z] Building nodejs source
+[debug] [2023-05-30T07:49:44.327Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:49:44.328Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:49:44.333Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:49:44.780Z] Serving at port 8193
+
+[debug] [2023-05-30T07:49:45.231Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-30T07:49:45.237Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2023-05-30T07:50:14.764Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:50:15.776Z] Validating nodejs source
+[debug] [2023-05-30T07:50:18.013Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:50:18.013Z] Building nodejs source
+[debug] [2023-05-30T07:50:18.013Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:50:18.014Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:50:18.021Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:50:18.512Z] Serving at port 8560
+
+[debug] [2023-05-30T07:50:18.541Z] Got response from /__/functions.yaml Failed to generate manifest from function source: SyntaxError: Unexpected token '}'
+[debug] [2023-05-30T07:50:18.541Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:
+     ... rom function source: SyntaxError: Unexpected token '}'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: SyntaxError: Unexpected token '}'\n\u0000","position":61,"line":0,"column":61},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 62:\n     ... rom function source: SyntaxError: Unexpected token '}'\n                                         ^"}
+[debug] [2023-05-30T07:50:18.545Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected token '}' {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: SyntaxError: Unexpected token '}'"}}
+[debug] [2023-05-30T07:52:53.978Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:52:54.991Z] Validating nodejs source
+[debug] [2023-05-30T07:52:58.222Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:52:58.223Z] Building nodejs source
+[debug] [2023-05-30T07:52:58.223Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:52:58.224Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:52:58.228Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:52:58.659Z] Serving at port 8442
+
+[debug] [2023-05-30T07:52:59.124Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+[debug] [2023-05-30T07:52:59.124Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: Cannot find module 'stripe'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: Cannot find module 'stripe'\n                                         ^"}
+[debug] [2023-05-30T07:52:59.129Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js"}}
+[debug] [2023-05-30T07:53:51.982Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:53:52.988Z] Validating nodejs source
+[debug] [2023-05-30T07:53:55.186Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:53:55.186Z] Building nodejs source
+[debug] [2023-05-30T07:53:55.186Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:53:55.188Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:53:55.193Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:53:55.553Z] Serving at port 8362
+
+[debug] [2023-05-30T07:53:55.959Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+[debug] [2023-05-30T07:53:55.960Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: Cannot find module 'stripe'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: Cannot find module 'stripe'\n                                         ^"}
+[debug] [2023-05-30T07:53:55.964Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js"}}
+[debug] [2023-05-30T07:55:36.360Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:55:37.363Z] Validating nodejs source
+[debug] [2023-05-30T07:55:39.577Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:55:39.578Z] Building nodejs source
+[debug] [2023-05-30T07:55:39.578Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:55:39.579Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:55:39.585Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:55:40.022Z] Serving at port 8596
+
+[debug] [2023-05-30T07:55:40.483Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+[debug] [2023-05-30T07:55:40.483Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: Cannot find module 'stripe'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: Cannot find module 'stripe'\n                                         ^"}
+[debug] [2023-05-30T07:55:40.488Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js"}}
+[debug] [2023-05-30T07:58:29.815Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T07:58:30.822Z] Validating nodejs source
+[debug] [2023-05-30T07:58:33.887Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T07:58:33.887Z] Building nodejs source
+[debug] [2023-05-30T07:58:33.888Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T07:58:33.889Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T07:58:33.896Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-30T07:58:34.238Z] Serving at port 8711
+
+[debug] [2023-05-30T07:58:34.786Z] Got response from /__/functions.yaml Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js
+[debug] [2023-05-30T07:58:34.787Z] Failed to parse functions.yaml incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:
+     ... fest from function source: Error: Cannot find module 'stripe'
+                                         ^ {"name":"YAMLException","reason":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line","mark":{"name":null,"buffer":"Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js\n\u0000","position":55,"line":0,"column":55},"message":"incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line at line 1, column 56:\n     ... fest from function source: Error: Cannot find module 'stripe'\n                                         ^"}
+[debug] [2023-05-30T07:58:34.800Z] shutdown requested via /__/quitquitquit
+
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'
+Require stack:
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\runtime\loader.js
+- C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to load function definition from source: Failed to generate manifest from function source: Error: Cannot find module 'stripe'\nRequire stack:\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\runtime\\loader.js\n- C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\node_modules\\firebase-functions\\lib\\bin\\firebase-functions.js"}}
+[debug] [2023-05-30T08:00:09.534Z] File C:\Users\isuru\WebstormProjects\amazon_clone\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\isuru\\WebstormProjects\\amazon_clone\\functions\\index.js changed, reloading triggers"}}
+[debug] [2023-05-30T08:00:10.683Z] Validating nodejs source
+[debug] [2023-05-30T08:00:16.590Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-30T08:00:16.590Z] Building nodejs source
+[debug] [2023-05-30T08:00:16.590Z] Failed to find version of module node: reached end of search path C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-05-30T08:00:16.592Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-30T08:00:16.602Z] Found firebase-functions binary at 'C:\Users\isuru\WebstormProjects\amazon_clone\functions\node_modules\.bin\firebase-functions'
