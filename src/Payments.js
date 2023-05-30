@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./styles/Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
@@ -10,12 +10,13 @@ import axios from "./axios";
 
 
 function Payments() {
+    const navigate = useNavigate()
     const [{basket}, dispatch] = useStateValue()
 
     const stripe = useStripe();
     const elements = useElements();
 
-    const [processing, setProcessing] = useState(false)
+    const [processing, setProcessing] = useState("")
     const [succeeded, setSucceeded] = useState(false)
     const [error, setError] = useState(null)
     const [disabled, setDisabled] = useState(true)
@@ -25,23 +26,23 @@ function Payments() {
     useEffect(() => {
         const getClientSecret = async () => {
             const response = await axios({
-                method:"post",
-                url:`/payments/create?total=${getBasketTotal(basket) * 100}`
+                method: "post",
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
             })
 
             setClientSecret(response.data.clientSecret)
         }
         getClientSecret().then(r => console.log(r));
     }, [basket])
-  console.log("clientSecret : ",clientSecret)
+    console.log("clientSecret : ", clientSecret)
     const handleSubmit = async (event) => {
         event.preventDefault()
         setProcessing(true)
 
 
-        const payLoad = await stripe.confirmCardPayment(clientSecret,{
-            payment_method:{
-                card:elements.getElement(CardElement)
+        const payLoad = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: elements.getElement(CardElement)
             }
         })
             .then(({paymentIntent}) => {
@@ -49,11 +50,11 @@ function Payments() {
                 setError(null)
                 setProcessing(false)
 
-                // navigate
+                navigate("/");
             })
     }
     const handleChange = (event) => {
-        event.preventDefault()
+        // event.preventDefault()
         setDisabled(event.empty)
         setError(event.error ? event.error.message : "")
 

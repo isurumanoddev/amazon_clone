@@ -23,16 +23,14 @@ app.post(
         const total = request.query.total;
         console.log("payments request received ", total);
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: 2000,
+            amount: total,
             currency: "usd",
             automatic_payment_methods: {enabled: true},
         });
-        response.status(200).send({clientSecret:"ABC12345"})
+        response.status(200).send({clientSecret:paymentIntent.client_secret})
     });
 
 
 // Listen command
 
 exports.api = functions.https.onRequest(app);
-// http://127.0.0.1:5001/clone-202305/us-central1/api/payments/create
-// http://127.0.0.1:5001/clone-202305/us-central1/api/payments/create?total=1500
