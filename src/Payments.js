@@ -6,6 +6,7 @@ import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./Components/CheckoutProduct";
 import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
+import axios from "axios";
 
 function Payments() {
     const [{basket}, dispatch] = useStateValue()
@@ -22,7 +23,12 @@ function Payments() {
 
     useEffect(() => {
         const getClientSecret = async () => {
-            // const response =await axios
+            const response =await axios({
+                method:"post",
+                url:`/payments/create?total=${getBasketTotal(basket) * 100}`
+            })
+            console.log("response : ",response)
+            setClientSecret(response.data.clientSecret)
         }
     }, [basket])
 
@@ -32,7 +38,18 @@ function Payments() {
 
         console.log("processing :", processing)
 
-        const payLoad = await stripe
+        const payLoad = await stripe.confirmCardPayment(clientSecret,{
+            payment_method:{
+                card:elements.getElement(CardElement)
+            }
+        })
+            .then(({paymentIntent}) => {
+                setSucceeded(true)
+                setError(null)
+                setProcessing(false)
+
+                // navigate
+            })
     }
     const handleChange = (event) => {
         event.preventDefault()
