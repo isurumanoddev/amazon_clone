@@ -7,11 +7,12 @@ import CheckoutProduct from "./Components/CheckoutProduct";
 import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 import axios from "./axios";
+import {db} from "./firebase";
 
 
 function Payments() {
     const navigate = useNavigate()
-    const [{basket}, dispatch] = useStateValue()
+    const [{basket,user}, dispatch] = useStateValue()
 
     const stripe = useStripe();
     const elements = useElements();
@@ -27,8 +28,9 @@ function Payments() {
         const getClientSecret = async () => {
             const response = await axios({
                 method: "post",
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+                url: `http://127.0.0.1:5001/clone-202305/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100}`
             })
+
 
             setClientSecret(response.data.clientSecret)
         }
@@ -46,13 +48,29 @@ function Payments() {
             }
         })
             .then(({paymentIntent}) => {
+                // console.log("paymentIntent : ",paymentIntent)
+                db
+                    .collection("users")
+                    .doc(user?.id)
+                    .collection("order")
+                    .doc(paymentIntent.id)
+                    .set({
+                        basket:basket,
+                        amount:paymentIntent.amount,
+                        created:paymentIntent.created
+                    })
+
+
                 setSucceeded(true)
                 setError(null)
                 setProcessing(false)
                 dispatch({
-                    type:"EMPTY_BASKET",
+                    type: "EMPTY_BASKET",
                 })
-                navigate("/");
+
+
+                navigate("/orders");
+
             })
     }
     const handleChange = (event) => {

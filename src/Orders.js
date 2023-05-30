@@ -1,5 +1,5 @@
 import React from 'react';
-import "/styles/Orders.css"
+import "./styles/Orders.css"
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./Components/CheckoutProduct";
 
