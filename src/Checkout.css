@@ -1,9 +1,13 @@
+body {
+    /*background: white;*/
+}
 .checkout {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 4.5fr 2fr;
     gap: 2rem;
+
 }
 .checkout__right,.checkout__left {
     background: white;

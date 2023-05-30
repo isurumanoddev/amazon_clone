@@ -1,7 +1,5 @@
 /* Styling for the payments container */
-body {
-  background: white;
-}
+
 .payments {
   margin: 0 auto;
 
@@ -64,8 +62,10 @@ body {
 
 .payment__details_list__title {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight:500;
   margin-bottom: 10px;
+  color: deepskyblue;
+  opacity: 0.7;
 }
 .payment__details_list__info {
   align-self: end;
@@ -75,7 +75,7 @@ body {
 
 }
 .payment__details_list__payment {
-   border: 1px solid rgba(0,0,0,0.1);
+
   border-radius: 8px;
   padding: 1rem;
   display: flex;
@@ -146,6 +146,7 @@ ol {
 
 }
 .payments__container__right__top {
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +160,7 @@ ol {
 }
 .button-2 {
   align-self: flex-end;
-  margin-right: 1rem;
+  /*margin-right: 1rem;*/
 }
 .payments__container__right__mid {
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -189,7 +190,14 @@ ol {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0;
+  color: darkred;
 }
 .conditions {
   line-height: 1.5rem;
+}
+.payment__cardElement {
+     border: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 6px;
+  color: aliceblue;
 }

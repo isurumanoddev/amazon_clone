@@ -1,5 +1,9 @@
 * {
     font-family:  Roboto,sans-serif;;
+
+}
+body {
+     background:rgb(234,237,237)  ;
 }
 .home {
 display: flex;
@@ -7,6 +11,7 @@ display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1500px;
+
 }
 .home__container {
 

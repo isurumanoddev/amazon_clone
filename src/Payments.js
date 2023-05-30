@@ -4,7 +4,14 @@ import "./Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
-import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js';
+import {
+    useStripe,
+    useElements,
+    CardElement,
+    PaymentElement,
+    AddressElement,
+    CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement
+} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 
 function Payments() {
@@ -13,6 +20,8 @@ function Payments() {
     const stripe = useStripe();
     const elements = useElements();
 
+    const [processing, setProcessing] = useState(null)
+    const [succeeded, setSucceeded] = useState("")
     const [error, setError] = useState(null)
     const [disabled, setDisabled] = useState(true)
 
@@ -66,19 +75,24 @@ function Payments() {
                             <div className="payment__details_list__title"> Add Debit or Credit Card Details</div>
                             <div className="payment__details_list__payment">
                                 <form action="" onSubmit={handleSubmit}>
-                                    <CardElement onChange={handleChange}/>
+                                    <CardElement className={"payment__cardElement"} onChange={handleChange}/>
 
+
+                                    <div className="payments__container__right__top">
+                                        <button
+                                            disabled={processing || disabled || succeeded}
+                                            className="payment__details_list__payment__submit button-2">{processing ? "Processing" : "Make Payment"}
+                                        </button>
+                                        <p>Choose a payment method to continue checking out. You'll still have a chance
+                                            to review and edit your order before it's final.</p>
+
+                                        {error && <div>{error}</div>}
+                                    </div>
                                 </form>
                             </div>
 
                         </li>
-                        <div className="payments__container__right__top">
-                            <button className="payment__details_list__payment__submit button-2">Make Payment
-                            </button>
-                            <p>Choose a payment method to continue checking out. You'll still have a chance to review
-                                and
-                                edit your order before it's final.</p>
-                        </div>
+
                         <CurrencyFormat
                             renderText={(value) => (
                                 <div className="payments__container__right__bootom">
