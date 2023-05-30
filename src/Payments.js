@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Await, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./styles/Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
@@ -30,13 +30,13 @@ function Payments() {
             console.log("response : ",response)
             setClientSecret(response.data.clientSecret)
         }
+        getClientSecret();
     }, [basket])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         setProcessing(true)
 
-        console.log("processing :", processing)
 
         const payLoad = await stripe.confirmCardPayment(clientSecret,{
             payment_method:{
