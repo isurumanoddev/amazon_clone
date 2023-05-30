@@ -12,7 +12,6 @@ function Header() {
 
     const getUsername = user?.email.split("@")[0]
 
-    console.log("getUsername : ",getUsername)
     const handleAuthentication = async () => {
         await auth.signOut()
     }

@@ -1,17 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import "./Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
-import {
-    useStripe,
-    useElements,
-    CardElement,
-    PaymentElement,
-    AddressElement,
-    CardNumberElement, CardExpiryElement, CardCvcElement, PaymentRequestButtonElement
-} from '@stripe/react-stripe-js';
+import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 
 function Payments() {
@@ -20,20 +13,35 @@ function Payments() {
     const stripe = useStripe();
     const elements = useElements();
 
-    const [processing, setProcessing] = useState(null)
-    const [succeeded, setSucceeded] = useState("")
+    const [processing, setProcessing] = useState(false)
+    const [succeeded, setSucceeded] = useState(false)
     const [error, setError] = useState(null)
     const [disabled, setDisabled] = useState(true)
+    const [clientSecret, setClientSecret] = useState(true)
 
-    const handleSubmit = (event) => {
+
+    useEffect(() => {
+
+    },[basket])
+
+    const handleSubmit = async (event) => {
         event.preventDefault()
+        setProcessing(true)
+
+           console.log("processing :" ,processing)
+
+        const payLoad =await stripe
     }
-    const handleChange = (event) => {
+    const handleChange =  (event) => {
         event.preventDefault()
         setDisabled(event.empty)
         setError(event.error ? event.error.message : "")
 
     }
+    console.log("disabled :" ,disabled)
+    console.log("processing :" ,processing)
+    console.log("succeeded :" ,succeeded)
+    console.log("error :" ,error)
 
     return (
         <div className="payments">
@@ -80,6 +88,7 @@ function Payments() {
 
                                     <div className="payments__container__right__top">
                                         <button
+                                            type={"submit"}
                                             disabled={processing || disabled || succeeded}
                                             className="payment__details_list__payment__submit button-2">{processing ? "Processing" : "Make Payment"}
                                         </button>

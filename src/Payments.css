@@ -37,7 +37,7 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   margin: 0 auto;
-  gap: 2rem;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -128,8 +128,13 @@ ol {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.2s;
 }
+.payment__details_list__payment__submit:hover {
 
+  background-color: #d3aa41;
+
+}
 /* Styling for the right container */
 .payments__container__right {
 
