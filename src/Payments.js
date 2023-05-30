@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import "./Payments.css"
+import {Await, Link} from "react-router-dom";
+import "./styles/Payments.css"
 import {getBasketTotal} from "./reducer";
 import {useStateValue} from "./StateProvider";
-import CheckoutProduct from "./CheckoutProduct";
+import CheckoutProduct from "./Components/CheckoutProduct";
 import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 
@@ -21,27 +21,29 @@ function Payments() {
 
 
     useEffect(() => {
-
-    },[basket])
+        const getClientSecret = async () => {
+            // const response =await axios
+        }
+    }, [basket])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         setProcessing(true)
 
-           console.log("processing :" ,processing)
+        console.log("processing :", processing)
 
-        const payLoad =await stripe
+        const payLoad = await stripe
     }
-    const handleChange =  (event) => {
+    const handleChange = (event) => {
         event.preventDefault()
         setDisabled(event.empty)
         setError(event.error ? event.error.message : "")
 
     }
-    console.log("disabled :" ,disabled)
-    console.log("processing :" ,processing)
-    console.log("succeeded :" ,succeeded)
-    console.log("error :" ,error)
+    console.log("disabled :", disabled)
+    console.log("processing :", processing)
+    console.log("succeeded :", succeeded)
+    console.log("error :", error)
 
     return (
         <div className="payments">

@@ -1,9 +1,9 @@
 import React from 'react';
-import "./Header.css"
+import "../styles/Header.css"
 import {ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
 import {Link} from "react-router-dom";
-import {useStateValue} from "./StateProvider";
-import {auth} from "./firebase";
+import {useStateValue} from "../StateProvider";
+import {auth} from "../firebase";
 
 
 function Header() {

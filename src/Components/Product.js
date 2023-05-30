@@ -1,7 +1,7 @@
 import React from 'react';
-import "./Product.css"
+import "../styles/Product.css"
 import {Star} from "@mui/icons-material";
-import {useStateValue} from "./StateProvider";
+import {useStateValue} from "../StateProvider";
 
 function Product({title, image, price, rating,id}) {
 
