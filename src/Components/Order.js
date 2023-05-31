@@ -8,12 +8,31 @@ import {getBasketTotal} from "../reducer";
 function Order({order}) {
     return (
         <div className={"order"}>
-
-            <p className="order__date">Order Date :{moment.unix(order.data.created).format("MMMM Do YYYY,h:mma")}</p>
+            <div className="order__info">
+                  <p className="order__date">Order Date :{moment.unix(order.data.created).format("MMMM Do YYYY,h:mma")}</p>
 
             <p className="order__id">Order ID :
                 <small>{order.id}</small>
             </p>
+                     <CurrencyFormat
+                renderText={(value) => (
+                    <div className={"subtotal__container"}>
+                        <h4 className="subtotal__price">Subtotal ({order.data.basket.length} items): <span
+                            className="price">{value}</span></h4>
+
+
+                    </div>
+
+                )}
+                value={getBasketTotal(order.data.basket)}
+                decimalScale={2}
+                displayType={'text'}
+                thousandSeparator={true}
+                prefix={'$'}
+            />
+            </div>
+
+
 
             <div className="order__container">
                 {
@@ -23,27 +42,7 @@ function Order({order}) {
                 }
 
             </div>
-            <CurrencyFormat
-                renderText={(value) => (
-                    <div className={"subtotal__container"}>
-                        <h4 className="subtotal__price">Subtotal ({basket.length} item): <span
-                            className="price">{value}</span></h4>
-                        <small className="subtotal__gift">
-                            <input type="checkbox"/>This Order Contain a gift
-                        </small>
-                        <button onClick={e => navigate("/payment")} type={"submit"}
-                                className="subtotal__checkoutBtn">Proceed to Checkout
-                        </button>
 
-                    </div>
-
-                )}
-                value={getBasketTotal(basket)}
-                decimalScale={2}
-                displayType={'text'}
-                thousandSeparator={true}
-                prefix={'$'}
-            />
 
 
         </div>

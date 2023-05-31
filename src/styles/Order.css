@@ -1,0 +1,29 @@
+.order {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1.2fr 2.5fr;
+
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.subtotal__price {
+    margin: 0;
+    padding: 0;
+       font-size: 1.2rem;
+    font-weight: 600;
+
+}
+.subtotal__gift {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.subtotal__container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
