@@ -11,6 +11,7 @@ function Checkout() {
     const [{basket}, dispatch] = useStateValue()
 
 
+
     return (
         <div className="checkout">
             <div className="checkout__left">
@@ -24,7 +25,7 @@ function Checkout() {
 
                         {basket.map((item) =>
 
-                            <CheckoutProduct id={item.id} image={item.image} title={item.title} price={item.price}/>
+                            <CheckoutProduct id={item.id} image={item.image} title={item.title} price={item.price} hideBtn={false}/>
                         )}
 
 

@@ -3,8 +3,9 @@ import "../styles/CheckoutProduct.css"
 import {useStateValue} from "../StateProvider";
 import FlipMove from 'react-flip-move';
 
-function CheckoutProduct({id, title, price, image}) {
+function CheckoutProduct({id, title, price, image, hideBtn}) {
     const [{basket}, dispatch] = useStateValue()
+
 
 
     const removeFromBasket = () => {
@@ -16,7 +17,7 @@ function CheckoutProduct({id, title, price, image}) {
     }
 
     return (
-        <FlipMove >
+        <FlipMove>
             <div className="checkout__left__mid__product">
                 <img src={image} alt=""
                      className="checkout__left__mid__image"/>
@@ -27,10 +28,11 @@ function CheckoutProduct({id, title, price, image}) {
                         <div className="checkout__left__mid__productInfo__style"><span>$ {price} </span></div>
                     </div>
                     <div className="checkout__left__mid__productInfo__buttons">
+                        {!hideBtn && (<button onClick={removeFromBasket}
+                                             className="checkout__left__mid__productInfo__box__remove">Delete
+                        </button>)
 
-                        <button onClick={removeFromBasket}
-                                className="checkout__left__mid__productInfo__box__remove">Delete
-                        </button>
+                        }
                     </div>
                 </div>
             </div>
