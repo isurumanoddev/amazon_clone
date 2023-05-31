@@ -16,7 +16,7 @@ function Orders() {
             const usersCollectionRef = collection(db, "users");
             const userDocRef = doc(usersCollectionRef, user?.uid);
             const orderCollectionRef = collection(userDocRef, "order");
-            console.log("orderCollectionRef : ", orderCollectionRef)
+
             getDocs(orderCollectionRef)
                 .then(snapShot => {
                     setOrders(snapShot.docs.map(doc => ({
@@ -32,6 +32,7 @@ function Orders() {
 
 
     }, [user])
+    console.log("orders : ",orders)
 
     return (
         <div className="orders">
