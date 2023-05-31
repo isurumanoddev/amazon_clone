@@ -8,11 +8,16 @@ import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 import axios from "./axios";
 import {db} from "./firebase";
+import {doc, setDoc, collection, addDoc} from "firebase/firestore";
 
+
+function data() {
+
+}
 
 function Payments() {
     const navigate = useNavigate()
-    const [{basket,user}, dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
 
     const stripe = useStripe();
     const elements = useElements();
@@ -48,18 +53,36 @@ function Payments() {
             }
         })
             .then(({paymentIntent}) => {
-                // console.log("paymentIntent : ",paymentIntent)
-                db
-                    .collection("users")
-                    .doc(user?.id)
-                    .collection("order")
-                    .doc(paymentIntent.id)
-                    .set({
-                        basket:basket,
-                        amount:paymentIntent.amount,
-                        created:paymentIntent.created
-                    })
+                console.log("paymentIntent : ", paymentIntent.id)
+                // db
+                //     .collection("users")
+                //     .doc(user?.uid)
+                //     .collection("order")
+                //     .doc(paymentIntent.id)
+                //     .set({
+                //         basket:basket,
+                //         amount:paymentIntent.amount,
+                //         created:paymentIntent.created
+                //     })
 
+                const usersCollectionRef = collection(db, "users");
+                const userDocRef = doc(usersCollectionRef, user?.uid);
+                const orderCollectionRef = collection(userDocRef, "order");
+                const orderDocRef = doc(orderCollectionRef, paymentIntent.id);
+
+                const data = {
+                    basket: basket || [], // Use empty array if basket is undefined
+                    amount: paymentIntent.amount || 0, // Use 0 if amount is undefined
+                    created: paymentIntent.created || "", // Use empty string if created is undefined
+                };
+
+                setDoc(orderDocRef, data)
+                    .then(() => {
+                        console.log("Document successfully written!");
+                    })
+                    .catch((error) => {
+                        console.error("Error writing document: ", error);
+                    });
 
                 setSucceeded(true)
                 setError(null)
