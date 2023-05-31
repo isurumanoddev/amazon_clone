@@ -1,0 +1,27 @@
+.orders{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+/* CSS Styles for the Order Page */
+
+.order__id {
+
+
+
+   font-size: 14px;
+  color: #999;
+  /* Add more styles as needed */
+}
+
+.order__date {
+     margin: 2rem 0 1rem 0 ;
+  font-size: 14px;
+  color: #999;
+  /* Add more styles as needed */
+}
+.order__container {
+    max-width: 1100px;
+    margin: 0 auto;
+}

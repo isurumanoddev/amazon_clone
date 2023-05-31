@@ -4,6 +4,7 @@ import {useStateValue} from "./StateProvider";
 
 import {collection, doc, getDocs} from "firebase/firestore";
 import {db} from "./firebase";
+import Order from "./Components/Order";
 
 
 function Orders() {
@@ -20,10 +21,10 @@ function Orders() {
             getDocs(orderCollectionRef)
                 .then(snapShot => {
                     setOrders(snapShot.docs.map(doc => ({
-                        id:doc.id,
-                        data:doc.data()
+                        id: doc.id,
+                        data: doc.data()
                     })))
-                    console.log("snapShot : ",snapShot)
+                    console.log("snapShot : ", snapShot)
                 })
 
         } else {
@@ -32,13 +33,16 @@ function Orders() {
 
 
     }, [user])
-    console.log("orders : ",orders)
+    console.log("orders : ", orders.map(order => order))
 
     return (
         <div className="orders">
-            <h1>Orders page</h1>
+            <h1>Your Recent Orders</h1>
 
-
+            <div className="order__container">
+                {orders?.map(order =>
+                    <Order order={order}/>)}
+            </div>
         </div>
     );
 }
