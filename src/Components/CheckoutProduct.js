@@ -1,7 +1,8 @@
 import React from 'react';
 import "../styles/CheckoutProduct.css"
 import {useStateValue} from "../StateProvider";
-import FlipMove from 'react-flip-move';
+import {Fade} from 'react-reveal';
+
 
 function CheckoutProduct({id, title, price, image, hideBtn}) {
     const [{basket}, dispatch] = useStateValue()
@@ -17,7 +18,7 @@ function CheckoutProduct({id, title, price, image, hideBtn}) {
     }
 
     return (
-        <FlipMove>
+        <Fade bottom>
             <div className="checkout__left__mid__product">
                 <img src={image} alt=""
                      className="checkout__left__mid__image"/>
@@ -36,7 +37,7 @@ function CheckoutProduct({id, title, price, image, hideBtn}) {
                     </div>
                 </div>
             </div>
-        </FlipMove>
+        </Fade>
 
     );
 }

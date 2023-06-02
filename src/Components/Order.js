@@ -23,6 +23,7 @@ function Order({order}) {
 
                             </div>
 
+
                         )}
                         value={getBasketTotal(order.data.basket)}
                         decimalScale={2}

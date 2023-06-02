@@ -4,6 +4,7 @@ import {ArrowDropDown, ShoppingBasket} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 import {useStateValue} from "../StateProvider";
 import {auth} from "../firebase";
+import {IconButton} from "@mui/material";
 
 
 function Header() {
@@ -56,8 +57,10 @@ function Header() {
             </div>
             <Link to="/checkout">
                 <div className="header__basket">
+                    <IconButton>
+                        <ShoppingBasket/>
+                    </IconButton>
 
-                    <ShoppingBasket/>
 
                     <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
                 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import "../styles/Home.css"
 import Product from "./Product";
 
+
 function Home() {
     return (
         <div className="home">
@@ -14,6 +15,7 @@ function Home() {
 
 
             <div className="home__row">
+
                 <Product
                     title={"The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life"}
                     price={500.00}
