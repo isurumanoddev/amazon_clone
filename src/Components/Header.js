@@ -58,7 +58,7 @@ function Header() {
             <Link to="/checkout">
                 <div className="header__basket">
                     <IconButton>
-                        <ShoppingBasket/>
+                        <ShoppingBasket className={"basket__icon"}/>
                     </IconButton>
 
 

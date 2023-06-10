@@ -33,7 +33,7 @@ function Payments() {
         const getClientSecret = async () => {
             const response = await axios({
                 method: "post",
-                url: `http://127.0.0.1:5001/clone-202305/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100}`
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
             })
 
 
