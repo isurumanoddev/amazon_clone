@@ -43,20 +43,17 @@
 
 }
 
-.product > button {
-    background: #ffd501;
-    font-size: 0.7rem;
-    padding: 8px 14px;
-    border: none ;
-    margin-top: 10px;
-    color: #111;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
 
+.add_to_basket {
+    background: #FF9900!important;
+    color: #111111!important;
+    font-weight: 600!important;
+    letter-spacing: 1.5px!important;
+    font-size: 12px!important;
+    padding: 10px 20px!important;
 }
-.product > button:hover {
-    background: #e3d002;
-
+.add_to_basket:hover {
+background: #e09729 !important;
+    color: #111111!important;
 
 }

@@ -4,6 +4,7 @@ import CurrencyFormat from "react-currency-format"
 import {useStateValue} from "../StateProvider";
 import {getBasketTotal} from "../reducer";
 import {useNavigate} from "react-router-dom";
+import {Button} from "@mui/material";
 
 function Subtotal() {
     const [{basket}, dispatch] = useStateValue()
@@ -19,7 +20,7 @@ function Subtotal() {
                         <small className="subtotal__gift">
                             <input type="checkbox"/>This Order Contain a gift
                         </small>
-                        <button onClick={e => navigate("/payment")} type={"submit"} className="subtotal__checkoutBtn">Proceed to Checkout</button>
+                        <Button  className={"button2"} onClick={e => navigate("/payment")} type={"submit"} >Proceed to Checkout</Button>
 
                     </div>
 
