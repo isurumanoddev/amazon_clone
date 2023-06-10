@@ -8,12 +8,11 @@ import {useStripe, useElements, CardElement,} from '@stripe/react-stripe-js';
 import CurrencyFormat from "react-currency-format";
 import axios from "./axios";
 import {db} from "./firebase";
-import {doc, setDoc, collection, addDoc} from "firebase/firestore";
+import {doc, setDoc, collection} from "firebase/firestore";
+import {Button} from "@mui/material";
 
 
-function data() {
 
-}
 
 function Payments() {
     const navigate = useNavigate()
@@ -148,11 +147,11 @@ function Payments() {
 
 
                                     <div className="payments__container__right__top">
-                                        <button
+                                        <Button
                                             type={"submit"}
                                             disabled={processing || disabled || succeeded}
-                                            className="payment__details_list__payment__submit button-2">{processing ? "Processing" : "Make Payment"}
-                                        </button>
+                                            className="button2">{processing ? "Processing" : "Make Payment"}
+                                        </Button>
                                         <p>Choose a payment method to continue checking out. You'll still have a chance
                                             to review and edit your order before it's final.</p>
 
