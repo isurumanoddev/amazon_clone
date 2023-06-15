@@ -1,6 +1,38 @@
 # Amazon Clone E-commerce Site
 This project is a fully functional Amazon clone built using React.js, React Router, Context API, Stripe, Firebase, and Google Auth. It provides users with a seamless online shopping experience similar to the popular e-commerce platform, Amazon.
+# Features
+Product Listing: Browse through a wide range of products with detailed information, including product images, descriptions, and prices.
 
+Product Search: Utilize the search functionality to quickly find specific products based on keywords or categories.
+
+User Authentication: Enable users to sign up, log in, and log out using their Google accounts for a secure and personalized experience.
+
+Shopping Cart: Add products to a virtual shopping cart, review the items, adjust quantities, and remove products before proceeding to the checkout.
+
+Payment Processing: Experience a secure payment process using Stripe integration, allowing users to make purchases using their credit or debit cards.
+
+Order Placement: After successful payment, users can place their orders and receive confirmation emails with order details.
+
+Order History: View a comprehensive history of past orders, including order statuses and detailed information about each purchase.
+
+User Reviews and Ratings: Users can provide feedback by leaving reviews and ratings for products they have purchased.
+
+User Profile: Allow users to manage their personal information, including shipping addresses and payment methods.
+
+# Technologies Used
+React.js: A popular JavaScript library for building user interfaces, providing a fast and responsive shopping experience.
+
+React Router: A routing library for React that enables navigation between different pages within the application.
+
+Context API: A state management solution in React, allowing efficient sharing of data across components.
+
+Firebase: A real-time database and backend-as-a-service platform that provides authentication, database, storage, and hosting services.
+
+Stripe: A payment processing platform that ensures secure and seamless transactions.
+
+Node.js: A JavaScript runtime environment that allows server-side execution of JavaScript code.
+
+Express.js: A flexible and minimalistic web application framework for Node.js, used for building the server-side of the application.
 
 # Getting Started with Create React App
 
