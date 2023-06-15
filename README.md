@@ -1,3 +1,7 @@
+# Amazon Clone E-commerce Site
+This project is a fully functional Amazon clone built using React.js, React Router, Context API, Stripe, Firebase, and Google Auth. It provides users with a seamless online shopping experience similar to the popular e-commerce platform, Amazon.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
